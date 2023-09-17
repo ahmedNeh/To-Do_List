@@ -1,0 +1,118 @@
+*{
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0; 
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #171621;
+}
+
+.container{
+  width: 100%;
+
+  padding: 10px;
+}
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: #26243c;
+  margin: 100px auto 20px;
+  padding: 30px ;
+  border-radius: 10px;
+}
+
+.input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #171621;
+  padding-left: 20px;
+  border-radius: 30px;
+  margin-top: 25px;
+}
+
+.input-box{
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+  color: hsl(234, 39%, 75%);
+  font-weight: bold;
+  &::placeholder{
+    color: hsl(234, 39%, 75%);
+  }
+  
+}
+
+.add{
+  border: 3px hsl(234, 39%, 75%) solid;
+  outline: none;
+  background-color: transparent;
+  border-radius: 40px;
+  color:hsl(234, 39%, 75%) ;
+  padding: 16px 40px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all .3s ease-in-out;
+    &:hover{
+      color: black;
+      background-color: hsl(234, 39%, 75%);
+    }
+
+}
+
+ul li{
+  display: flex;
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  padding-bottom: 20px;
+  
+}
+
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(To-Do-Img/images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before{
+  background-image: url(To-Do-Img/images/checked.png);
+}
+
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover{
+  background-color: hsl(234, 39%, 75%);
+}
